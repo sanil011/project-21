@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 370px;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #9195a3;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  width: 100vw;
+  max-width: 400px;
+  height: 100vh;
+  background-color: #22275b;
+  transition: background-color 0.3s ease;
+  overflow-y: scroll;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+#root.overlay-dice {
+  background-color: transparent !important;
+}
+
+.dice {
+  will-change: background;
+}
+
+.dice-animate {
+  animation: 1.5s steps(50, end) 2.4s infinite alternate diceMove-start;
+}
+
+.dice-roll-animate {
+  animation: dice-roll 0.5s steps(50, end);
+  /* animation: 1.5s steps(50, end) 2.4s infinite alternate dice-roll; */
+}
+
+@keyframes diceMove-start {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -937.5em;
+  }
+}
+
+.dice-overlay {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+}
+html {
+  scroll-padding-top: 150px;
+}

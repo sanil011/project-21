@@ -1,0 +1,72 @@
+.subordinate-container {
+    background-color: #22275b;
+    height: 100vh;
+    box-sizing: border-box;
+    color: white;
+    font-family: inherit;
+  }
+  
+  .subordinate-header {
+    background-color: #2b3270;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 15px;
+    margin-bottom: 2px;
+  }
+  
+  .subordinate-back-icon {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .subordinate-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .subordinate-tab-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .subordinate-tab {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 14px;
+    background-color: #2b3270;
+    border: none;
+    border-radius: 8px;
+    color: #ccc;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .subordinate-tab.active {
+    background: linear-gradient(to top right, #2aa8f3, #297bf2);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .subordinate-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+  
+  .subordinate-empty-img {
+    width: 220px;
+    height: auto;
+    opacity: 0.3;
+  }
+  
+  .subordinate-empty-text {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #9a9cb3;
+  }
+  

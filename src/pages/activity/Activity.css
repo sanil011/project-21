@@ -1,0 +1,113 @@
+.activity-page {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    padding-bottom: 20px;
+  }
+  
+  .activity-header {
+    background-color: #2b3270;
+    text-align: start;
+    padding: 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+  }
+  /* Title */
+  .activity-header-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+ 
+  .activity-top-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    margin-top: 0px;
+  }
+  
+  .activity-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center */
+    width: 70px;
+    height: 110px; /* Added fixed height */
+    border-radius: 6px;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .activity-icon-box img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+  }
+  
+  .activity-icon-box span {
+    font-size: 11px;
+    color: rgb(210, 206, 206);
+    text-align: center;
+    line-height: 1.2;
+    height: 40px; /* Fix height to reserve space for 1–2 lines of text */
+    white-space: normal; /* Allow wrapping */
+    overflow: visible;
+  }
+  
+  
+  .activity-middle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px 12px;
+    gap: 16px;
+  }
+  
+  .activity-card {
+    background-color: #2b3270;
+    border-radius: 10px;
+    padding: 0px;
+    font-size: 12px;
+    text-align: start;
+  }
+  .activity-cards-title {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.activity-card p{
+padding: 5px 10px;
+font-size: 12px;
+}
+  .activity-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .activity-banner {
+    background-color: #2b3270;
+    border-radius: 12px;
+    margin: 15px 12px;
+    text-align: start;
+    overflow: hidden;
+  }
+  
+  .activity-banner img {
+    width: 100%;
+  }
+  
+  .activity-banner p {
+    padding-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+  }

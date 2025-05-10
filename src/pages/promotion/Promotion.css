@@ -1,0 +1,242 @@
+/* ===== Page Container ===== */
+.promotion-container {
+    background-color: #22275b;
+    color: white;
+    font-family: sans-serif;
+    padding: 0;
+    padding-bottom: 70px; /* Space for bottom nav */
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* ===== Page Title ===== */
+  .promotion-page-title {
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  /* ===== Commission Info Card ===== */
+  .promotion-commission-box {
+    background: linear-gradient(to top right, #65c7e7, #297bf2);
+    padding: 20px 0;
+    height: 250px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .promotion-amount {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .promotion-label {
+    color: #47a8f8;
+    background-color: #22275b;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0px 60px;
+    margin-top: 4px;
+    border-radius: 15px;
+  }
+  
+  .promotion-tip {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ebe9e9;
+    margin-top: 4px;
+  }
+  
+  /* ===== Subordinate Boxes ===== */
+  .promotion-subordinate-boxes {
+    display: flex;
+    gap: 2px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    z-index: 2;
+  }
+  
+  .promotion-sub-box {
+    flex: 1;
+    background-color: #2b3270;
+    border-radius: 16px;
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .promotion-sub-box-header {
+    background-color: #374992;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  .promotion-sub-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+  
+  .promotion-sub-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .promotion-sub-box-content p {
+    margin: 5px 10px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .promotion-number {
+    color: #00ffcc;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  
+  /* ===== Invitation Button ===== */
+  .promotion-invite-button {
+    margin: 140px 10px 10px 10px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: linear-gradient(to top right, #2aa8f3, #297bf2);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 900;
+    font-size: 14px;
+  }
+  
+  /* ===== Info Row: Copy Code ===== */
+  .promotion-copy-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #2c367c;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 12px 10px 0;
+  }
+  
+  .promotion-copy-label {
+    font-size: 14px;
+    color: #e9eaeb;
+    display: flex;
+    align-items: center;
+  }
+  
+  .promotion-copy-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #39448f;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  
+  .promotion-code {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    word-break: break-all;
+  }
+  
+  .promotion-copy-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ===== Info Links ===== */
+  .promotion-info-link {
+    background-color: #2c367c;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 10px 10px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .promotion-arrow {
+    margin-left: auto;
+    color: #a0c8ff;
+    font-size: 18px;
+  }
+  
+  /* ===== Promotion Data Card (4 Stats) ===== */
+  .promotion-data-card {
+    background-color: #2c367c;
+    border-radius: 10px;
+    margin: 12px 10px 0;
+    padding: 14px;
+    color: white;
+  }
+  
+  .promotion-data-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .promotion-data-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+  
+  .promotion-data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 6px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .promotion-data-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .promotion-data-item:nth-child(2n) {
+    border-right: none;
+  }
+  
+  .promotion-data-number {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .promotion-data-label {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #9eadc2;
+  }
+  

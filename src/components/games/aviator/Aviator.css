@@ -1,0 +1,61 @@
+
+.auto-bottom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-direction: row;
+  border-top: 2px solid #0d0d0d;
+  padding-top: 5px;
+}
+.global-error {
+    position: fixed;
+    top: -100px;
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 5; /* Ensures it's on top */
+    pointer-events: none; /* Prevents interaction issues */
+    white-space: nowrap;
+}
+.global-error.show {
+    animation: slideDownFadeOut 3s ease-in-out;
+}
+
+.win-message {
+    position: fixed;
+    top: -100px;
+    background-color: rgb(255, 174, 0);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 5; /* Ensures it's on top */
+    pointer-events: none; /* Prevents interaction issues */
+    white-space: nowrap;
+}
+.win-message.show{
+    animation: slideDownFadeOut 3s ease-in-out;
+}
+
+@keyframes slideDownFadeOut {
+  0% {
+    top: 10px; /* Start off-screen */
+    opacity: 0;
+  }
+  20% {
+    top: 40px; /* Slide down to visible area */
+    opacity: 1;
+  }
+  80% {
+    top: 40px; /* Stay in position */
+    opacity: 1;
+  }
+  100% {
+    top: 10px; /* Move back up */
+    opacity: 0;
+  }
+}

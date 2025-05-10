@@ -1,0 +1,112 @@
+.winning-box-container {
+  margin: 0px 16px;
+  margin-bottom: 10px;
+}
+
+.winning-box-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.winning-box-dot {
+  width: 6px;
+  min-height: 20px;
+  border-radius: 9999px;
+  background-color: #61a9ff;
+}
+
+.winning-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 300px; /* Fixed height to avoid layout shift */
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.winning-box-list.fade {
+  opacity: 0.4;
+  transform: translateY(8px);
+}
+
+.winning-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b3270;
+  color: white;
+  border-radius: 12px;
+  padding: 4px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: clamp(13px, 1.6vw, 16px);
+}
+
+.winner-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 39%;
+  min-width: 0;
+}
+
+.winner-avatar {
+  height: 46px;
+  width: 46px;
+  border-radius: 9999px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.winner-avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.winner-name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.game-image {
+  height: 40px;
+  width: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #60a5fa;
+  flex-shrink: 0;
+  margin: 0 8px;
+}
+
+.game-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.amount-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  width: 33%;
+}
+
+.amount-value {
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: clamp(13px, 1.6vw, 16px);
+}
+
+.amount-label {
+  color: #d1d5db;
+  font-size: 12px;
+  line-height: 1.2;
+}

@@ -1,0 +1,96 @@
+.header-wrapper {
+    background-color: #2b3270;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 8px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
+  
+  .header-logo {
+    margin-left: 12px;
+  }
+  
+  .logo-img {
+    height: 36px;
+    border-radius: 8px;
+  }
+  
+  .header-auth-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .header-balance-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 9999px;
+    margin-right: 12px;
+  }
+  
+  .header-balance-text {
+    color: #ebeaea;
+    font-weight: bold !important;
+    font-size: 16px;
+  }
+  
+  .header-mail-icon {
+    font-size: 26px;              /* Keep the Mail icon size large */
+    color: #61a9ff;               /* Blue stroke color */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .header-mail-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-mail-wrapper::before {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    width: 18px;               
+    height: 16px;
+    background-color: #4162a9;    
+    z-index: 1;
+  }
+  
+  .header-mail-dot {
+    position: absolute;
+    z-index: 5;
+    top: 1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    animation: pulse-dot 1s ease-in-out infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes pulse-dot {
+    0%, 25% {
+      transform: scale(.8);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75%, 100% {
+      transform: scale(.8);
+      opacity: 1;
+    }
+  }
+  

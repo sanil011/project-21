@@ -1,0 +1,114 @@
+/* Wrapper */
+.win-popup-container {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    animation: fadeInUp 0.8s ease;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  /* Popup box */
+  .win-popup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #123405;
+    border-radius: 25px;
+    border: 1px solid rgb(129, 135, 126);
+    padding: 10px 14px;
+    height: 48px;
+    min-width: 280px;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    gap: 2px;
+  }
+  
+  /* Left section */
+  .win-popup-left {
+    width: 110px;
+    padding: 2px;
+    padding-right: 10px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .win-popup-text {
+    color: #c0c9bd;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+  .win-popup-multiplier {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  
+  /* Right section */
+  .win-popup-right {
+    background: #4eaf11;
+    border-radius: 25px;
+    padding: 4px 30px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    min-width: 140px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.6px; /* 👈 Adjust spacing here */
+    /* font-family: 'Inter', sans-serif; */
+  }
+  .win-popup-amount {
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 1px;
+    line-height: 1;
+  }
+  .win-popup-value {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .win-popup-close {
+    position: absolute;
+    top: 50%;
+    right: 8px; /* ⬅️ Space from edge */
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    color: rgb(191, 185, 185);
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .win-popup-close:hover {
+    transform: translateY(-50%) scale(1.2);
+  }
+  

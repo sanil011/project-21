@@ -1,0 +1,280 @@
+/* Auto Play Button */
+.auto-play-button {
+  background-color: #0088cc;
+  color: rgb(255, 255, 255);
+  border: 1px solid #bed9e7;
+  border-radius: 2rem;
+  padding: 0;
+  cursor: pointer;
+  width: 80px;
+  height: 20px;
+}
+
+.auto-play-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.auto-play-active {
+  background-color: #dc3545;
+}
+
+.auto-play-active:hover {
+  background-color: #c82333;
+}
+
+/* Modal Overlay */
+.auto-play-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal */
+.auto-play-modal {
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  width: 380px;
+  margin-right: 30px;
+  margin-left: 30px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Modal Header */
+.auto-play-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  background: #1e1e1e;
+  padding: 8px 8px;
+
+}
+
+.auto-play-modal-header h2 {
+  font-size: small;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+.auto-play-close-btn {
+  background: none;
+  border: none;
+  width: 40px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sections */
+.auto-play-section {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border-bottom: 1px solid #444;
+
+}
+
+.auto-play-inactive {
+  background: #111;
+  opacity: 0.5;
+}
+
+/* Number of Rounds */
+.auto-play-rounds-section {
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0px 8px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.auto-play-round-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.auto-play-round-button {
+  padding: 4px 15px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 12px;
+  min-width: 50px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.auto-play-selected {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Settings */
+.auto-play-settings {
+  margin: 0px 8px;
+  margin-top: 8px;
+
+}
+.auto-play-settings span{
+  font-size: 14px;
+}
+
+.auto-play-setting-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+/* Toggle Switch */
+.auto-play-toggle-switch {
+  position: relative;
+  min-width: 36px;
+  margin-right: 6px;
+  height: 20px;
+}
+
+.auto-play-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.auto-play-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #666;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.auto-play-slider::before {
+  position: absolute;
+  content: "";
+  height: 18px !important;
+  width: 18px !important;
+  left: 2px !important;
+  bottom: 1px !important;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.auto-play-toggle-switch input:checked + .auto-play-slider {
+  background-color: #4CAF50;
+}
+
+.auto-play-toggle-switch input:checked + .auto-play-slider::before {
+  transform: translateX(20px);
+}
+
+/* Number Input Group */
+.auto-play-input-group {
+  display: flex;
+  align-items: center;
+  background: #2c2c2c;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 4px 6px;  
+  gap: 3px;
+  max-width: 140px;
+}
+
+/* Buttons (- and +) */
+.auto-play-input-btn {
+  background: #444;
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+.auto-play-input-btn:hover {
+  background: #555;
+}
+
+.auto-play-input-btn:active {
+  transform: scale(0.95);
+}
+
+/* Input Field */
+.auto-play-auto-input {
+  width: 45px;
+  text-align: center;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 70px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+/* RS Label */
+.auto-play-usd-label {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+/* Bottom Buttons */
+.auto-play-modal-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #1e1e1e;
+}
+
+.auto-play-reset-button {
+  background-color: #ff9900;
+  padding: 10px 20px;
+  width: 120px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1.5px solid #f8d095; /* 👈 Adds a bold orange border */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.auto-play-start-button {
+  background-color: #28a745;
+  padding: 10px 20px;
+  width: 120px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1.5px solid #a4f895;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}

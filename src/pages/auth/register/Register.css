@@ -1,0 +1,282 @@
+.register-container {
+    background-color: #22275b;
+    color: white;
+    font-family: sans-serif;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  
+  /* Header */
+  .register-header {
+    background-color: #2b3270;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the logo */
+    padding: 12px 20px;
+    position: relative; /* For absolute back arrow */
+  }
+  
+  .register-back-arrow {
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+  }
+  
+  
+  .register-logo {
+    border-radius: 8px;
+    height: 38px;
+  }
+  
+  /* Banner */
+  .register-banner {
+    background: #2b3270;
+    padding: 10px 0px 24px 20px ;
+    color: white;
+  }
+  
+  .register-banner h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .register-banner p {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  
+  /* Section Title */
+  .register-section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+    padding: 0px 0 10px;
+    font-size: 16px;
+    color: #61a9ff;
+    font-weight: bold;
+    border-bottom: 1.5px solid #263da1;
+    gap: 6px;
+  }
+  .register-section-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #61a9ff;
+  }
+  /* Field Group */
+  .register-field {
+    margin: 8px 20px;
+  }
+  
+  .register-field label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
+  
+  /* Phone input */
+  .register-input-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .country-select {
+    background-color: #2b3270;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 10px;
+    font-size: 14px;
+    width: 85px;
+    flex: none;
+    background-image: url("/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+  }
+  
+  .register-input-group input {
+    flex: 1;
+    background-color: #2b3270;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    color: white;
+    outline: none;
+  }
+  
+  /* Password Fields */
+  .register-input-wrapper {
+    background-color: #2b3270;
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .register-input-wrapper input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+    font-size: 14px;
+  }
+  
+  /* Verification Code */
+  .register-verification-group {
+    background-color: #2b3270;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .register-verification-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  .send-btn {
+    background: linear-gradient(to right, #2aa8f3, #297bf2);
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    padding: 8px 26px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Checkbox */
+  .register-agreement {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #ccc;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .register-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #1b1f47;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+  }
+  
+  .register-checkbox:checked {
+    background-color: #56aaff;
+    border-color: #56aaff;
+  }
+  
+  .register-checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    font-weight: bold;
+  }
+  .privacy-link {
+    color: rgb(243, 65, 65);
+    font-weight: 500;
+  }
+  /* Register Button */
+  .register-submit-btn {
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    padding: 14px;
+    background: linear-gradient(to right, #2aa8f3, #297bf2);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  .register-login-btn {
+    display: block;
+    margin: 20px auto 0;
+    width: calc(100% - 80px);
+    padding: 12px 24px;
+    border: 1px solid rgb(80, 124, 227);
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .register-login-btn span {
+    color: #3dbaff; /* Highlighted login text */
+    margin-left: 4px;
+    font-weight: bold;
+  }
+  /* Font: Inter */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Icon styling */
+.icon-wrapper {
+  background-color: #2b3270;
+  padding: 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #61a9ff; /* blue */
+}
+.register-error-message {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.register-success-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+}
+/* Hide default password visibility toggle icon for Chrome, Edge, Safari */
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-clear-button,
+input::-webkit-inner-spin-button {
+  display: none !important;
+  appearance: none;
+}

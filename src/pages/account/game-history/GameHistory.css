@@ -1,0 +1,165 @@
+/* Main Background */
+.game-history-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Header Section */
+  .game-history-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #2b3270;
+    position: relative;
+  }
+  
+  /* Back Button */
+  .game-history-back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+  }
+  
+  /* Title */
+  .game-history-title {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Filters Section */
+  .game-history-filters {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+  }
+  
+ /* Updated Filter Button */
+.game-history-filter-btn {
+  flex: 1;
+  margin: 0 5px;
+  background: #2b3270;
+  color: rgb(201, 199, 199);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.game-history-filter-btn:hover {
+  background: rgba(120, 140, 250, 0.7);
+  box-shadow: 0px 0px 10px rgba(120, 140, 250, 0.4);
+}
+
+.filter-label {
+  flex: 1;
+  text-align: left;
+}
+
+.chevron-icon {
+  margin-left: 8px;
+}
+
+  /* Scrollable Tabs Section */
+  .game-history-tabs-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 10px;
+  }
+  
+  .game-history-tabs {
+    display: inline-flex;
+    gap: 8px;
+    padding: 10px 0;
+  }
+  
+  .game-history-tab {
+    display: inline-block;
+    min-width: 80px;
+    background: #2b3270;
+    color: #ccc;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .game-history-tab.active {
+    background: linear-gradient(to top right, #2aa8f3, #297bf2);
+    color: white;
+  }
+  
+  .game-history-tabs-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
+  }
+  
+  .game-history-tabs-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  /* No Data Section */
+  .game-history-no-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .game-history-no-data img {
+    width: 220px;
+    opacity: 0.3;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+  }
+  
+  .game-history-no-data p {
+    color: #7c7c91;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  
+  /* Floating Chat Button */
+  .game-history-floating-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .game-history-floating-chat-btn img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 0px 10px rgba(120, 180, 255, 0.8));
+  }
+  
+  .game-history-floating-chat-btn:hover img {
+    filter: drop-shadow(0px 0px 15px rgba(120, 180, 255, 1));
+  }
+  

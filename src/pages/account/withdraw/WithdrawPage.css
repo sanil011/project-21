@@ -1,0 +1,397 @@
+/* ========================== */
+/*       GENERAL STYLES       */
+/* ========================== */
+
+.withdraw-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    border-radius: 12px;
+}
+
+/* ========================== */
+/*          HEADER            */
+/* ========================== */
+
+.header {
+    background-color: #2b3270;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.back-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.history-text {
+    font-size: 14px;
+    color: white;
+    margin-left: auto;
+}
+
+/* ========================== */
+/*       BALANCE SECTION      */
+/* ========================== */
+
+.balance-section {
+    background: url('../assets/BalanceBg.png') no-repeat center;
+    background-size: contain;
+    height: 150px;
+    margin: 0px 15px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.wallet-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.balance-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.balance-amount-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.balance-amount {
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.refresh-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.refresh-icon {
+    width: 24px;
+}
+
+/* ========================== */
+/*    WITHDRAWAL METHODS      */
+/* ========================== */
+
+.withdrawal-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0px 15px;
+    margin-top: 15px;
+}
+
+.withdrawal-card {
+    background: #2b3270;
+    padding: 12px;
+    text-align: end;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Highlight selected method */
+.withdrawal-card.active {
+    background: #ffcc00;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.6);
+}
+
+.withdrawal-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 6px;
+}
+/* ========================== */
+/*      WITHDRAW FORM         */
+/* ========================== */
+
+.withdraw-form {
+    background: #2b3270;
+    padding: 20px 15px;
+    border-radius: 12px;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.form-header {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    background: #22275b;  /* ✅ Matches blue background */
+    border-radius: 40px;  /* ✅ Smooth rounded edges */
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+/* ₹ Symbol Inside Input */
+.input-wrapper::before {
+    content: "₹"; 
+    position: absolute;
+    left: 15px;  /* ✅ Keeps Rupee Symbol aligned */
+    font-size: 22px;
+    color: #61a9ff;
+    font-weight: bold;
+}
+
+/* Input Field */
+.input-box {
+    width: 100%;
+    padding: 12px 12px 12px 40px;  /* ✅ Space for ₹ symbol */
+    border: none !important;  /* ✅ No border at all */
+    outline: none !important; /* ✅ No focus effect */
+    font-size: 16px;
+    background: transparent;  /* ✅ Fully transparent background */
+    color: white;
+    font-weight: bold;
+    text-align: left;  /* ✅ Aligns entered text to the left */
+    pointer-events: all;
+
+}
+
+/* Placeholder Text */
+.input-box::placeholder {
+    color: #61a9ff;  /* ✅ Matches light blue text */
+    font-weight: bold;
+    text-align: left;  /* ✅ Left-aligned placeholder */
+}
+
+/* Balance & Amount Info */
+.amount-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.balance-info-text {
+    font-weight: bold;
+    color: white;
+}
+
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.received-amount {
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+/* Buttons */
+.all-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.all-btn:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+.withdraw-button {
+    width: 100%;
+    background: #ffcc00;
+    color: black;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.withdraw-button:hover {
+    background: #e6b800;
+}
+
+/* ========================== */
+/*      WITHDRAWAL RULES      */
+/* ========================== */
+
+.withdrawal-rules {
+    background: #2b3270;  /* ✅ Slight transparency for smooth blending */
+    border-radius: 12px;  /* ✅ Softer edges */
+    font-size: 14px;  /* ✅ More readable text */
+    line-height: 1.8;  /* ✅ Better spacing */
+    margin: 15px 0px;
+    padding: 18px 22px; /* ✅ More balanced padding */
+    border-left: 5px solid #ffcc00;  /* ✅ More prominent left highlight */
+    color: white;
+    box-shadow: inset 0px 0px 8px rgba(106, 203, 254, 0.189); /* ✅ Adds depth */
+}
+
+/* Individual Rule Items */
+.withdrawal-rules p {
+    display: flex;
+    align-items: flex-start;  /* ✅ Ensures bullet points stay at the top */
+    margin: 8px 0;
+    font-weight: 500;
+    font-size: 13.5px; /* ✅ Just slightly bigger for clarity */
+}
+
+/* Bullet Point Icons */
+.withdrawal-rules p::before {
+    content: "🔹";
+    margin-right: 10px;
+    color: #ffcc00; /* ✅ Golden bullet points */
+    font-size: 16px;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Red Highlight */
+.highlight.red {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* ========================== */
+/*       BUTTON STYLES        */
+/* ========================== */
+
+.button-container {
+    text-align: center;
+}
+
+.submit-button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ========================== */
+/*       OTHER STYLES         */
+/* ========================== */
+
+.rupee-symbol {
+    background: #2b3270;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+
+.amount-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.all-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.received-amount {
+    margin: 10px 0;
+}
+
+/* ========================== */
+/*   ADD BANK MODAL    */
+/* ========================== */
+
+.withdraw-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .withdraw-modal-card {
+    background: #2b3270;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .withdraw-modal-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .withdraw-modal-card button {
+    padding: 10px 20px;
+    background: #61a9ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,16 @@
+.tab-box {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 5rem; /* 20 in Tailwind */
+    cursor: pointer;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    background-color: #393939;
+  
+    /* Slightly brighter glow */
+    box-shadow: 0 0 6px 1.5px rgba(255, 255, 255, 0.12);
+  }
+  
+  

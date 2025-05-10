@@ -1,0 +1,36 @@
+/* -------------------------------
+   Carousel Wrapper with Depth
+---------------------------------- */
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    
+    /* aspect-ratio: 8/3; Adjust if needed */
+}
+
+
+/* -------------------------------
+Individual Slide
+---------------------------------- */
+.carousel-slide {
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+/* -------------------------------
+Image Styling with Shadow
+---------------------------------- */
+.carousel-image {
+    border-radius: .8rem;
+    background: rgb(41, 41, 41);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.406);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+

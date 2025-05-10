@@ -1,0 +1,207 @@
+/* Wallet Container */
+.wallet-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    padding-bottom: 20px;
+}
+/* Wallet Header */
+.wallet-header {
+    background-color: #2b3270;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Title */
+.wallet-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Wallet Icon (Centering Fix) */
+.wallet-page-icon {
+    width: 60px !important;
+    height: 60px !important;
+    display: block;
+    margin: 10px auto;  /* Ensures it's centered */
+    margin-bottom: 5px;
+}
+/* Balance */
+.wallet-balance {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0px 0;
+}
+
+/* Total Balance Label */
+.wallet-total-balance {
+    font-size: 14px;
+    color: #c3c3c3;
+}
+/* Wallet Body */
+.wallet-body {
+    background: #2b3270;
+    border-radius: 10px;
+    margin: 15px 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Wallet Details */
+.wallet-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.wallet-box {
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.wallet-progress-circle {
+    position: relative;
+    width: 80px; /* increased from 60px */
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #00cfff 0%,
+      #00cfff var(--progress),
+      #374992 var(--progress),
+      #374992 100%
+    );
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px #00cfff80, 0 0 24px #00cfff40;
+  }
+  
+  /* Inner masked circle */
+  .wallet-progress-circle::after {
+    content: attr(data-progress);
+    position: absolute;
+    width: 56px; /* proportionally bigger to match new size */
+    height: 56px;
+    background-color: #2b3270 !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+  }
+  
+  /* Inner circle to mask center */
+  .wallet-progress-circle::after {
+    content: attr(data-progress);
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-color: #22275b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+  }
+  
+  
+
+.wallet-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.wallet-label {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Wallet Transfer Button */
+.wallet-transfer-btn {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.wallet-transfer-btn:hover {
+    background: #2980b9;
+}
+/* Wallet Actions Container */
+.wallet-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 18px;
+    padding: 10px;
+    margin-top: 0px;
+  }
+  
+  /* Individual Action Box */
+  .wallet-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    background: #2b3270;
+    border-radius: 10px;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .wallet-action:hover {
+    background: #3a3f92;
+  }
+  
+  /* Icon */
+  .wallet-action-icon {
+    width: 100%;
+    margin-bottom: 6px;
+    object-fit: contain;
+  }
+  
+  /* Label */
+  .wallet-action span {
+    font-size: 12px;
+    color: rgb(210, 206, 206);
+    text-align: center;
+    line-height: 1.2;
+  }
+  

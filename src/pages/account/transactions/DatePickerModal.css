@@ -1,0 +1,164 @@
+/* Background overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  /* Modal container */
+  .modal-container {
+    width: 100%;
+    max-width: 400px;
+    height: 50vh;
+    background-color: #1d2147;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 0 auto;
+  
+    /* Ensuring it starts off-screen */
+    position: fixed;
+    bottom: -50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease-out;
+  }
+  
+  /* Show modal state */
+  .modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-container.show {
+    bottom: 0; /* Moves it up smoothly */
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2b3270;
+    margin-top: -10px;
+  }
+
+  .modal-title{
+    font-size: 20px;
+  }
+  
+  /* Date Picker Scroll */
+  .date-picker {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Vignette (top and bottom fade) */
+  .date-picker::before,
+  .date-picker::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 200px; /* Adjust for stronger or weaker effect */
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .date-picker::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgb(24, 22, 31), transparent);
+  }
+  
+  .date-picker::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgb(24, 22, 31), transparent);
+  }
+  
+  
+  .column {
+    flex: 1;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    
+  
+    /* Hide scrollbar (cross-browser) */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE and Edge */
+  }
+  
+  .column::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari */
+  }
+  
+  
+  .column::before,
+  .column::after {
+    content: "";
+    display: block;
+    height: calc(50% - 24px); /* Adjust to match half the height of .date-item */
+    flex-shrink: 0;
+  }
+  
+  .date-item {
+    font-size: 16px;
+    color: #ccc;
+    padding: 10px 0;
+    height: 48px;
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Remove selected class, just use highlight strip */
+  .highlight-strip {
+    background-color: #48dee948;
+    position: absolute;
+    top: 56%;
+    left: 0;
+    right: 0;
+    height: 48px;
+    transform: translateY(-55%);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+  }
+  
+  /* Slide Up Animation */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  

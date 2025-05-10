@@ -1,0 +1,116 @@
+/* Icon Background Style */
+.icon-bg {
+    background-color: #2b3270;
+    padding: 6px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #2aa8f3; /* Blue icon color */
+  }
+  
+  /* Container */
+  .bank-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Back Button */
+  .bank-back-button {
+    position: absolute;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Header */
+  .bank-header {
+    background-color: #2b3270;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  /* Warning Message */
+  .bank-warning {
+    background: #2b3270;
+    color: #ffcc00;
+    font-size: 13px;
+    padding: 12px;
+    border-radius: 30px;
+    margin: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+  }
+  
+  .bank-input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+  }
+  
+  /* Labels */
+  .bank-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ece2e2;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  /* Input Fields */
+  .bank-input {
+    background: #2b3270;
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 25px;
+    outline: none;
+  }
+  
+  /* Save Button */
+  .bank-save-button {
+    width: 90%;
+    background: linear-gradient(to top right, #2aa8f3, #297bf2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: background 0.3s;
+  }
+  
+  .bank-save-button:hover {
+    background: #5a6bb3;
+  }
+  

@@ -1,0 +1,437 @@
+/* General Styles */
+.deposit-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    border-radius: 12px;
+  }
+
+/* Header */
+.header {
+    background-color: #2b3270;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .back-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  /* Deposit history text */
+  .history-text {
+    font-size: 14px;
+    color: white;
+    margin-left: auto; /* Keeps it on the right */
+    white-space: nowrap;
+  }
+  
+/* Balance Section */
+.balance-section {
+    background: url('../assets/BalanceBg.png') no-repeat center;
+    background-size: contain;
+    height: 150px;
+    margin: 0px 15px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: flex-start; /* Moves content upwards */
+    border-radius: 10px;
+}
+
+/* Left Side - Wallet Icon, Balance Text, Amount & Refresh Button */
+.balance-left {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Moves everything slightly up */
+}
+
+/* Wallet Icon & Balance Text */
+.balance-title {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between wallet icon & text */
+}
+
+/* Wallet Icon */
+.wallet-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Balance Info - Balance Text & Amount */
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Balance Text */
+.balance-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Amount & Refresh Button */
+.balance-amount-container {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Space between amount & refresh button */
+    margin-top: -4px; /* Moves amount & button slightly up */
+}
+
+/* Amount */
+.balance-amount {
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Refresh Button */
+.refresh-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.refresh-icon {
+    width: 24px; /* Adjust the size as needed */
+  }
+
+.refresh-button:hover {
+    color: #f1c40f;
+}
+
+/* ARPay Section */
+.arpay-section {
+    background: #2b3270;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* ARPay Left Side - Icon & Text */
+.arpay-left {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Adjust spacing */
+}
+
+/* ARPay Icon */
+.arpay-icon {
+    width: 40px; /* Reduce icon size */
+    height: auto;
+}
+
+/* Text Container */
+.arpay-text {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bonus Badge - Top Right */
+.bonus-badge-ar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url('../assets/gift.png') no-repeat center;
+    background-size: contain;
+    width: 40px;  /* Adjust width */
+    height: 40px; /* Adjust height */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Bonus Badge - Now has a background image */
+.bonus-badge {
+    position: absolute;
+    top: -2px !important;
+    right: 2px !important;
+    background: url('../assets/gift.png') no-repeat center;
+    background-size: contain;
+    width: 30px;  /* Adjust width */
+    height: 30px; /* Adjust height */
+    color: white;
+    font-size: 8px !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  /* Payment Options */
+  .payment-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0px 15px;
+    margin-top: 15px;
+  }
+  /* Payment Details */
+.payment-details {
+    margin: 15px ;
+    padding: 12px;
+    background: #2b3270;
+    border-radius: 6px;
+}
+
+.payment-content {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+  
+  .payment-card {
+    background: #2b3270;
+    padding: 12px;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+  }
+  
+  .payment-card:hover {
+    background: #2e4b8e;
+  }
+  
+  .payment-card.active {
+    background: #3366ff;
+  }
+  
+  .payment-card .bonus-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 10px;
+  }
+
+  /* Payment Options */
+  .payment-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .payment-card {
+    background: #2b3270;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+  }
+  
+  .payment-card.active {
+    background: #ffcc00;
+    color: black;
+  }
+
+  .qr-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .qr-image {
+    width: 100%;
+    max-width: 150px;  /* Set the image size according to your design */
+    height: auto;
+  }
+  
+  
+/* UPI Payment Form */
+.upi-payment-form {
+    background: #1a2b6d;
+    padding: 15px;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: white;
+  }
+  
+  /* UPI Row */
+  .upi-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .deposit-input-container {
+    position: relative; /* Ensure error text is positioned correctly */
+    width: 100%; /* Keep the width of the container consistent */
+    max-width: 150px; /* Or any other value based on your design */
+}
+  /* Labels */
+  .upi-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    flex: 1;
+  }
+  
+  /* Right Section (UPI ID + Copy Button) */
+  .upi-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 2;
+    justify-content: flex-end;
+  }
+  
+  .upi-id {
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  .copy-button {
+    background: #ffcc00;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Username */
+  .user-name {
+    font-weight: bold;
+    color: #ffcc00;
+    text-align: right;
+    flex: 2;
+  }
+  
+  /* Input Fields */
+  .deposit-input-box {
+    background-color: white;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .error-text {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+  }
+  
+  /* Submit Button */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .submit-button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Select Channel */
+  .channel-section {
+    margin: 0px 15px;
+    margin-top: 20px;
+  }
+  
+  .channel-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .channel-card {
+    background: #374992;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .channel-card:hover {
+    background: #3b4e8f;
+  }
+  
+  .channel-card.active {
+    background: #3366ff;
+  }
+  
+  .channel-card p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+  
+  .bonus-text {
+    font-size: 10px;
+    color: #ffcc00;
+  }
+  
+  /* Floating Chat Button */
+  .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: blue;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,872 @@
+/* *{
+    -webkit-tap-highlight-color: transparent;
+} */
+.app-container {
+    width: 100%;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #000000 !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.game-window{
+    width: 100%;
+    margin: auto;
+    padding: 0%;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 8px;
+    border-radius: 10px;
+    margin-bottom: 0%;
+}
+
+.desktop-wrapper {
+    background-color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar styles */
+.navbar-aviator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #111;
+}
+
+.site-logo {
+    color: #ff0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.coin-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coin-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #ffd700;
+    border-radius: 50%;
+}
+
+.aviator-amount {
+    color: #0f0;
+    font-weight: bold;
+}
+
+.hamburger {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Multiplier marquee */
+.multiplier-container {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    padding-bottom:0.4rem ;
+    background-color: #000000 !important;
+    /* margin: 0%; */
+}
+
+.multiplier-scroll {
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    animation: scroll 20s linear infinite;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width: 400px) {
+    .multiplier-scroll {
+        gap: 0.5rem;
+    }
+    .multiplier-input{
+        font-size: 0.5rem;
+        padding: 0.3rem 1.0rem 0.3rem 0.3em;
+    }
+    .multiplier-input:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+}
+
+.multiplier {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Game window */
+.game-window {
+    display: flex;
+    aspect-ratio: 16/11;
+    background-color:#000000 !important;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    color: #fff;
+    /* margin: rem; */
+    border-radius: 0rem;
+    height: 85%;
+    padding: 0;
+    margin: 0;
+    max-height: 350px;
+    max-width: 768px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.betting-sections {
+    padding:0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+}
+
+.betting-section {
+    background-color: #1B1C1D;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 5px 0 0;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.betting-section.betting-active {
+    border: 2px solid #dc0000;
+    /* padding: 1.5rem; */
+}
+
+@media screen and (max-width: 750px) {
+    .waiting-text {
+        position: absolute;
+        left: 1/80px;
+        top: 0px;
+        /* bottom: 500px; */
+        color: #a99d9d;
+        font-size: 1.1rem;
+        font-weight: 600;
+        white-space: nowrap;
+        text-transform:none;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+.waiting-text {
+    position: absolute;
+    left: 1/80px;
+    top: 0px;
+    /* bottom: 500px; */
+    color: #a99d9d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform:none;
+    letter-spacing: 0.2px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .waiting-text {
+        font-size: 0.80rem;
+        letter-spacing: 0.1px;
+        font-weight: 600;
+    }
+    
+}
+.aviator-betting-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0rem;
+}
+
+.aviator-tabs-container {
+    background-color: #141516;
+    border-radius: 2rem;
+    padding: 0.15rem;
+    display: flex;
+    gap: 0;
+}
+.aviator-tabs-container2 {
+    background-color: #141516;
+    border-radius: 2rem;
+    padding: 0.15rem;
+    display: flex;
+    gap: 0;
+    margin-bottom: 10px;
+}
+
+.aviator-tab {
+    padding: 0.2rem 1.8rem;
+    border: none;
+    background-color: #141516;
+    color: #999292;
+    border-radius: 2rem;
+    /* cursor: pointer; */
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: transparent;
+}
+
+.aviator-active {
+    color: rgba(255, 255, 255, 0.868);
+    background-color: #444;
+}
+
+.main-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    position: relative;
+    align-items: flex-start;
+}
+
+.amount-control {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    position: relative;
+}
+
+.amount-adjuster {
+    display: flex;
+    align-items: center;
+    background-color: #000000b3;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    height: 1.5rem;
+}
+
+.adjuster-btn {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid  #9ea0a36c;
+    border-radius: 50%;
+    background-color: transparent;
+    color:#9ea0a3;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 3rem;
+    padding: 0;
+}
+
+.amount-input:focus {
+    outline: none;
+}
+
+.preset-amounts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0;
+}
+
+.preset-row {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.preset-btn {
+    flex: 1;
+    padding: 0.2rem;
+    background-color: #141516;
+    border: none;
+    color: #ffffff80;
+    border: 1px solid #ffffff1b;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.bet-button {
+    flex: 1;
+    background-color: #28A909;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: 200;
+    border: 2px solid rgba(79, 253, 79, 0.612);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 90px;
+    transition: all 0.3s ease;
+    text-shadow: 2px #030303de;
+
+}
+
+/* .bet-button.cancel {
+    background-color: #dc0000;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    height: 70px;
+    min-height: unset;
+    border: 2px solid rgba(255, 112, 3, 0.612);
+    width: auto;
+    margin-top: 0;
+    align-self: flex-end;
+} */
+.bet-button.cancel {
+    background: #CB011A;
+    padding: 0.5px;
+    border-radius: 1.5rem;
+    height: 60px;
+    min-height: unset;
+    border: 2px solid rgba(233, 115, 37, 0.911);
+    box-shadow:none; /* Outer border effect */
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.bet-text {
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 2px solid #000000;
+    font-weight: 200;
+    text-align: center;
+}
+
+.bet-amount {
+    text-shadow: 1px #000000;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    /* margin-top: 0.25rem; */
+}
+.aviator-bet-amount{
+    text-shadow: 1px #000000;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}
+/* Remove input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Add hover effects */
+.adjuster-btn:hover,
+.preset-btn:hover {
+    background-color: #444;
+}
+
+.bet-button:hover {
+    background-color: #28a909;
+}
+
+.bet-button.cancel:hover {
+    background-color: #cc0000;
+}
+
+.betting-history {
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.history-tabs {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 1rem; */
+}
+
+.bets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bets-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.total-bets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.total-bets .amount {
+    color: white;
+}
+
+.bets-columns {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.7fr 1.2fr;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.bets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: calc(10 * (40px + 0.5rem));
+    /* Height for 10 rows: row-height + gap */
+    overflow: hidden;
+}
+
+.bet-row {
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.7fr 1.2fr;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(197, 176, 176, 0.812);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.bet-row.won {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.user-info span {
+    color: #19e92d;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.avatar {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.multiplier {
+    font-size: 0.9rem;
+    color: #00c853;
+    text-align: center;
+}
+
+.histry-container {
+    display: flex;
+    justify-content:center;
+    position: relative;
+    /* right: 5px; */
+    align-items:center;
+    /* padding: 0.5rem; */
+    /* background-color: #100f0f; */
+    border-radius: 1rem;
+    /* margin-right: 0.5rem; */
+}
+.histry-button {
+    /* position: sticky; */
+    display: flex;
+    align-items:center;
+    /* justify-content:space-between; */
+    padding: 0.5rem;
+    border: 1px solid #545050;
+    background-color: rgb(30, 29, 29);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #e3dada;
+    /* margin-right: 5px; */
+  }
+  
+  .histry-button:focus {
+    outline: 2px solid #007bff;
+  }
+  
+  .histry-icon {
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-arr {
+    font-size: 0.6rem;
+    margin-left: 2px;
+  }
+  
+
+/* Scrollbar styles */
+.bets-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bets-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bets-list::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+.bets-list::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+.total-bets-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.25rem;
+}
+
+.total-bets-header {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.total-amount {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 0.25rem 0;
+}
+
+/* Update existing styles */
+.my-bets-list {
+    height: auto;
+    max-height: none;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.my-bets-columns {
+    grid-template-columns: 1fr 1fr 0.7fr 1.2fr;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Update bet-row for my-bets */
+.my-bets-list .bet-row {
+    grid-template-columns: 1fr 1fr 0.7fr 1.2fr;
+}
+
+/* Update scrollbar for my bets */
+.my-bets-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.my-bets-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.my-bets-list::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+.my-bets-list::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Ensure text doesn't overflow in rows */
+.bet-row>* {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Adjust text sizes for better fit */
+.cashout {
+    font-size: 0.9rem;
+    color: #4bb7ed;
+}
+
+/* Update auto controls styles */
+.auto-controls {
+    margin:10px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.1rem;
+}
+
+.auto-bottom-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-direction: row;
+    border-top: 2px solid #0d0d0d;
+    padding-top: 5px;
+}
+
+.auto-play-btn {
+    background-color: #0088cc;
+    color: rgb(255, 255, 255);
+    border: 1px solid #bed9e7;
+    border-radius: 2rem;
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+    /* flex-direction: row; */
+    width: 90px;
+    /* Fixed width for auto play button */
+    height: 25px;
+}
+
+.auto-cashout-control {
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Update multiplier input styles */
+.multiplier-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.multiplier-container{
+    width: 100%;
+
+}
+.multiplier-input {
+    width: 80px;
+    background-color: #000000b3;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.2rem 0.3rem 0.5em;
+    /* Added padding for the × symbol */
+    border-radius: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.multiply-symbol {
+    position: absolute;
+    right: 0.75rem;
+    color: #888;
+    cursor: pointer;
+    user-select: none;
+}
+
+.multiplier-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.auto-play-btn:hover {
+    background-color: #0077b3;
+}
+
+.multiply-symbol:hover {
+    color: #fff;
+}
+
+/* Toggle switch styles */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.toggle-slider {
+    background-color: #00c853;
+}
+
+input:checked+.toggle-slider:before {
+    transform: translateX(20px);
+}
+
+/* Add disabled states */
+.adjuster-btn:disabled,
+.preset-btn:disabled,
+.amount-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.unity-container {
+    width: 100%;
+    /* Full width of the parent container */
+    height: 100%;
+    /* Full viewport height */
+    max-width: 960px;
+    /* Max width if you want to limit it */
+    max-height: 600px;
+    /* Max height if you want to limit it */
+    margin-left: 0.5rem ;
+    margin-right: 0.5rem;
+    /* Center the canvas horizontally */
+    border-radius: 1.5rem;
+    border : 1px solid #535353;
+    /* Add border-radius here for the container */
+    overflow: hidden;
+    /* Prevent the canvas from overflowing the rounded corners */
+
+}
+
+.unity-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    /* Ensure it fills the container */
+    border-radius: inherit;
+    /* Inherit border-radius from parent */
+}
+/* Loading screen with white background */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's above everything else */
+    animation: fadeIn 1s ease-out; /* Smooth fade-in animation */
+  }
+  
+  /* Spinner animation */
+  .spinner {
+    border: 8px solid #f3f3f3; /* Light gray border */
+    border-top: 8px solid #fa0000; /* Blue top border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite; /* Spinner animation */
+  }
+  
+  /* Spinner rotation animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Fade-in effect */
+  @keyframes fadeIn {
+    100% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* Desktop styles */
+@media (orientation: portrait) {
+    .app-container {
+        width: 100%;
+        /* Fixed width for desktop */
+    }
+}

@@ -1,0 +1,67 @@
+.game-type-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 999;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.game-type-modal-content {
+  background: #201d2b;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  transform: translateY(100%);
+  animation: slideUp 0.3s ease forwards;
+}
+
+.game-type-option {
+  background: #374992;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 0 0 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  word-break: break-word;
+}
+
+.game-type-option:hover {
+  background: #2d68f0;
+  box-shadow:  linear-gradient(to top right, #2aa8f3, #297bf2);
+}
+
+.game-type-option.selected {
+  background: linear-gradient(to top right, #2aa8f3, #297bf2);
+  color: white;
+  box-shadow: 0 0 8px rgba(42, 168, 243, 0.6);
+}
+
+.game-type-icon {
+  font-size: 16px;
+}

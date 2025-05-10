@@ -1,0 +1,96 @@
+.transaction-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #2b3270;
+    padding: 12px;
+    margin: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .transaction-icon {
+    background: #3b438f;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  .transaction-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .transaction-top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .transaction-title {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+  .transaction-amount {
+    color: #1e88e5;
+    font-weight: 600;
+  }
+  
+  .transaction-subtitle {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin: 4px 0;
+  }
+  
+  .transaction-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .transaction-date {
+    color: #aaa;
+    font-size: 12px;
+  }
+  
+  .transaction-status {
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+  
+  .status-completed {
+    background-color: #e7f8ef;
+    color: #27ae60;
+  }
+  
+  .status-requested {
+    background-color: #fff5e0;
+    color: #d9822b;
+  }
+  
+  .status-cancelled {
+    background-color: #fdecea;
+    color: #e74c3c;
+  }
+  
+  .status-default {
+    background-color: #ddd;
+    color: #333;
+  }
+  

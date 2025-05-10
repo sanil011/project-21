@@ -1,0 +1,161 @@
+/* -------------------------------
+   Footer Wrapper Styling
+---------------------------------- */
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    z-index: 50;
+    width: 100%;
+    max-width: 400px;
+    height: 75px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px; /* horizontal spacing */
+    padding-right: 6px;
+  }
+  
+  /* -------------------------------
+     NavLink (Tab) Styling
+  ---------------------------------- */
+  .footer-tab {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #b8babec5; /* gray-300 */
+    text-decoration: none;
+  }
+  
+  /* Active Tab Color */
+  .footer-tab.active {
+    color: #61a9ff; /* sky-500 */
+  }
+  /* Tab Label */
+  .footer-tab-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0px;
+  }
+  
+  /* -------------------------------
+  Icon Container & Icon Styling
+  ---------------------------------- */
+  
+  /* Icon Wrapper for vertical alignment */
+  .footer-icon-wrapper {
+      position: relative;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Special Promotion Tab Icon Styling */
+    .footer-promotion-icon-wrapper {
+    color: white;
+    position: absolute;
+    top: -20px;
+    background: linear-gradient(to bottom right, #2aa8f3, #297bf2);
+    border: 1.5px solid rgba(12, 24, 49, 0.669);
+    border-radius: 9999px;
+    padding: 8px 7px 4px;
+    transform: scale(1.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Aviator promotion style */
+.footer-promotion-icon-wrapper.promo-aviator {
+  background: linear-gradient(to bottom right, #444, #1b1c1d);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Pushpa promotion style */
+.footer-promotion-icon-wrapper.promo-pushpa {
+  background: linear-gradient(to bottom right, #c519a3, #ff02c0);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.footer-promotion-icon-wrapper.promo-dice {
+  background: linear-gradient(to bottom, #8c6a37, #9c825b);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Default Tab Icon Container */
+.footer-icon-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+  /* Icon Background Circle */
+  .footer-icon-bg {
+      position: absolute;
+      margin-left: 3px;
+      width: 16px;
+      height: 14px;
+      background-color: rgba(231, 228, 228, 0.306);
+      border-radius: 9999px;
+      z-index: 0;
+      transition: background-color 0.3s ease;
+    }
+    /* ---------------------------------------
+     Active State for Icon Background Circle
+    ------------------------------------------ */
+    .footer-tab.active .footer-icon-bg {
+      background-color: #5983c192; /* Match sky-500 or your desired active color */
+    }
+    
+  /* Actual Icon Placement */
+  .footer-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+/* Aviator overlay */
+.footer-wrapper.overlay-aviator::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #1b1c1d;
+  opacity: 0.85;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pushpa overlay */
+.footer-wrapper.overlay-pushpa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #2C115B;
+  opacity: 0.85;
+  z-index: 0;
+  pointer-events: none;
+}
+.footer-wrapper.overlay-dice::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #342e3d;
+  opacity: 0.85;
+  z-index: 0;
+  pointer-events: none;
+}
+/* Ensure content sits above the overlay */
+.footer-wrapper > * {
+  position: relative;
+  z-index: 1;
+}

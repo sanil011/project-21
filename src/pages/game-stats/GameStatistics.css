@@ -1,0 +1,151 @@
+.game-statistics-container {
+    background-color: #22275b;
+    min-height: 100vh;
+    padding-bottom: 1.5rem;
+  }
+  
+  .transaction-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .game-statistics-filters {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15px;
+    margin-top: 0.7rem;
+  }
+  
+  .game-statistics-filter-btn {
+    padding: 4px 12px;
+    min-width: 70px;
+    font-size: 14px;
+    border-radius: 999px;
+    background-color: #2b3270;
+    color: #ccc;
+    font-weight: 500;
+    border: none;
+    outline: none;
+  }
+  
+  .game-statistics-filter-btn.active {
+    background: linear-gradient(to top right, #2aa8f3, #297bf2);
+    color: white;
+  }
+  
+  .game-statistics-summary {
+    background-color: #2b3270;
+    margin: .7rem 15px 0;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  .game-statistics-amount {
+    color: #f97316;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .game-statistics-summary-label {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .game-statistics-list {
+    margin: 1rem 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .game-statistics-card {
+    background-color: #2b3270;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .game-statistics-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+  }
+  
+  .game-statistics-card-title {
+    color: white;
+  }
+  
+  .game-statistics-icon {
+    margin-left: -0.2rem;
+    width: 24px;
+    height: 24px;
+    color: #60a5fa;
+  }
+
+  .game-statistics-details {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    color: #ccc;
+    position: relative;
+  }
+  .game-statistics-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #60a5fa 30%, #1e3a8a 70%);
+    border-radius: 50%;
+    border: 2px solid #5bb1f8; /* dark border for outline */
+    box-sizing: content-box; /* ensures border stays outside */
+    z-index: 1;
+  }
+  .game-statistics-details li {
+    position: relative;
+    padding-top: 4px;
+    padding-left: 28px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Keep labels and values apart */
+    line-height: 1.5; /* Ensures consistent vertical spacing */
+  }
+  
+  /* Dotted line beneath the dot */
+  .game-statistics-details li::after {
+    content: "";
+    position: absolute;
+    left: 6px; /* centers with the dot */
+    top: 16px;
+    width: 2px;
+    height: calc(100% - 16px);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #60a5fa,
+      #60a5fa 2px,
+      transparent 2px,
+      transparent 6px
+    );
+    opacity: 0.8;
+    z-index: 0;
+  }
+  
+  /* Hide dotted line on the last item */
+  .game-statistics-details li:last-child::after {
+    display: none;
+  }
+  
+  .game-statistics-winning-amount {
+    color: #60a5fa;
+    font-weight: 500;
+  }
+  

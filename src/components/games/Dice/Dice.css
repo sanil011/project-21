@@ -1,0 +1,476 @@
+.dice-page {
+  background-color: transparent; /* dark background */
+  min-height: 100vh;
+  padding-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Dice.css */
+
+.dice-message-popup {
+  display: flex;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.dice-header {
+  margin-top: 12px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.dice-header img {
+  height: 8rem;
+}
+
+.dice-header-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+}
+
+.dice-left-panel,
+.dice-right-panel {
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.dice-left-panel {
+  width: 50%;
+}
+
+.dice-right-panel {
+  width: 50%;
+  align-items: flex-end;
+  text-align: right;
+  color: white;
+}
+
+.dice-how-to-play-button {
+  border: 0.5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  border-radius: 12px;
+  padding: 4px 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dice-section-title {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.dice-history-bubbles {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.dice-history-bubble {
+  width: 24px;
+  height: 24px;
+  background: white;
+  color: black;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice-timer-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dice-timer-box {
+  width: 40%;
+  height: 50%;
+  background-color: #384991;
+  color: #61a9ff;
+  font-size: 7rem;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dice wrapper - positions both left and right dice */
+.dice-wrapper {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 20px;
+  position: relative;
+  min-height: 160px;
+}
+
+/* Smaller outer ring */
+.dice-ring {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #8c6a37, #fbdf9a, #8c6a36);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), 0 0 0 2px black;
+}
+
+/* Smaller inner circle */
+.dice-inner {
+  width: 110px;
+  height: 110px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2; */
+  /* overflow: visible; */
+  /* position: relative; */
+}
+
+/* Shadow overlay on top of dice */
+.dice-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
+  pointer-events: none; /* Don't block clicks */
+  z-index: 3;
+}
+
+/* Bigger dice inside smaller circle */
+.dice-inner img {
+  width: 145px; /* bigger than container, will overflow slightly */
+  height: 145px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@media screen and (max-width: 370px) {
+  .dice-inner {
+    width: 90px;
+    height: 90px;
+  }
+  .dice-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .dice-wrapper {
+    min-height: 120px;
+  }
+
+  .dice-inner::after {
+    box-shadow: none;
+  }
+
+  .dice-inner img {
+    width: 105px; /* bigger than container, will overflow slightly */
+    height: 105px;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+/* Left and right positioning */
+.dice-left {
+  left: -5px;
+  top: 0;
+}
+
+.dice-right {
+  right: -5px;
+  top: 0;
+}
+
+@keyframes rollInLeft {
+  0% {
+    transform: translateX(-200px) rotate(-720deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rollInRight {
+  0% {
+    transform: translateX(200px) rotate(720deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Animate dice rings */
+.dice-left {
+  animation: rollInLeft 2s ease-out;
+}
+
+.dice-right {
+  animation: rollInRight 2s ease-out;
+}
+
+/* Main Bet Container */
+/* Main Bet Container */
+.dice-bet-container {
+  padding: 12px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bet Options Wrapper */
+.bet-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* CHANGE THIS to wrap */
+  justify-content: center;
+}
+
+/* Each Bet Option Block */
+.bet-option-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #8c6a37;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #342e3d;
+  flex: 1 1 100px; /* ALLOW shrinking */
+  min-width: 90px; /* Minimum size on very small screens */
+  max-width: 110px;
+}
+
+/* Button Row Container */
+.bet-btn-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+/* Bet Button with Odds Inside */
+.bet-btn {
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 30px;
+  font-size: 1rem;
+  border: 1px solid rgb(170, 149, 104);
+  background: linear-gradient(to bottom, #8c6a37, #fbdf9a, #8c6a36);
+  color: #fefdfe;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.bet-btn.active {
+  background: linear-gradient(to right, #dc2626, #b91c1c);
+  color: white;
+}
+
+/* Bet Label Section */
+.bet-label {
+  font-size: 0.75rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #fbdf9a;
+}
+
+.label-title,
+.label-arrow,
+.label-values {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.label-title {
+  font-weight: 700;
+  font-style: italic;
+  color: #fbdf9a;
+}
+
+.label-arrow {
+  font-weight: bold;
+  color: #fbdf9a;
+}
+
+.label-values {
+  color: white;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* EXTRA: Optional for even better mobile */
+@media (max-width: 480px) {
+  .bet-btn {
+    padding: 0 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Number Grid */
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.number-tile {
+  background: linear-gradient(to bottom, #8c6a37, #fbdf9a, #8c6a36);
+  color: #1e2235;
+  border: 2px solid #b4a376;
+  border-radius: 50%;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.number-tile.active {
+  background-color: #8c6a37;
+  color: white;
+}
+
+/* Even / Odd Section */
+.even-odd-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.even-odd {
+  width: 33.33%;
+  padding: 0.5rem;
+  text-align: center;
+  color: #f3f0e9;
+  font-weight: bold;
+  background-color: #2a2f4a;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  /* 👇 Your custom styles */
+  border: 8px solid transparent; /* needs to be transparent for effect */
+
+  /* Gradient border trick */
+  background-image: linear-gradient(#241d2a, #241d2a),
+    /* inner solid */ linear-gradient(to bottom, #8c6a37, #fbdf9a, #8c6a36); /* border gradient */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.2s ease;
+}
+
+.even {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 2px 6px;
+  padding-right: 0px;
+}
+
+.odd {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2px 6px;
+  padding-left: 0px;
+}
+
+.even-odd.active {
+  background-color: #8c6a37;
+  color: white;
+}
+
+/* tables */
+.dice-tab-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 12px;
+}
+
+.dice-tab {
+  border-radius: 12px;
+  padding: 12px 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dice-tab-active {
+  background-color: #8c6a37; /* warm gold-brown */
+  color: #ffffff;
+}
+
+.dice-tab-inactive {
+  background-color: #342e3d; /* deep background */
+  color: #fbdf9a; /* gold text */
+}
+
+.dice-history-wrapper {
+  background-color: #241d2a; /* darkest base */
+  margin: 0 12px 12px 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}

@@ -1,0 +1,60 @@
+.commission-container {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  min-height: 100vh;
+  background-color: #22275b; /* dark navy background */
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.commission-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 15px;
+  background-color: #2b3270;
+}
+
+.commission-back-button {
+  position: absolute;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Title */
+.commission-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Date Filter Section */
+.commission-filters {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.commission-date-btn {
+  background-color: #2b3270;
+  color: #c9c7c7;
+  padding: 10px 10px;
+  margin: 0px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commission-date-btn span{
+  padding-left: 10px;
+}

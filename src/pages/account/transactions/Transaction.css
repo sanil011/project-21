@@ -1,0 +1,92 @@
+/* ========== Container ========== */
+.transaction-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background: #22275b;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* ========== Header ========== */
+  .transaction-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #2b3270;
+    position: relative;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+  }
+  
+  .back-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .transaction-title {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* ========== Filters ========== */
+  .transaction-filters {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+  }
+  
+  .filter-btn {
+    display: flex;
+    flex: 1;
+    margin: 0 5px;
+    background: #2b3270;
+    color: rgb(201, 199, 199);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: start;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background: rgba(120, 140, 250, 0.7);
+    box-shadow: 0px 0px 10px rgba(120, 140, 250, 0.4);
+  }
+  
+  /* ========== No Data Section ========== */
+  .no-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .no-data img {
+    width: 220px;
+    opacity: 0.3;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+  }
+  
+  .no-data p {
+    color: #7c7c91;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  

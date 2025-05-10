@@ -1,0 +1,22 @@
+.promotion-info-link { 
+    background-color: #2c367c;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 10px 10px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .promotion-info-link span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .promotion-arrow {
+    color: #999;
+  }
+  

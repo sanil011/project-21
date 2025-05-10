@@ -1,0 +1,88 @@
+.invitation-rules-container {
+  background-color: #22275b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.invitation-rules-header {
+  background-color: #2b3270;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.invitation-rules-back-button {
+  background: none;
+  border: none;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.invitation-rules-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.invitation-rules-placeholder {
+  width: 28px; /* Matches back button size to center title */
+}
+
+.invitation-rules-banner {
+  background-color: #22275b;
+  padding: 20px 16px 10px 16px;
+  text-align: center;
+}
+
+.invitation-rules-highlight {
+  font-size: 18px;
+  font-weight: 600;
+  color: #009dff;
+  margin-bottom: 4px;
+}
+
+.invitation-rules-subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.invitation-rules-list {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.invitation-rule-card {
+  background-color: #2b3270;
+  border-radius: 10px;
+  padding: 16px;
+  position: relative;
+}
+
+.invitation-rule-id {
+  color: #e5ecec;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.invitation-rule-underline {
+  width: 24px;
+  height: 2px;
+  background-color: #55678e;
+  margin: 0 auto 16px 0; /* aligned to left, space below */
+  border-radius: 1px;
+}
+
+.invitation-rule-text {
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.5;
+}
