@@ -13,7 +13,7 @@ import { SET_DICE_GAME_HISTORY, RESET_DICE_PLACED_BET, SET_DICE_BET_HISTORY, ale
 import { getBetHistoryAPI, getCurrentGameResultAPI, submitBet } from "../../../utils/diceApi";
 import { fetchUserBalance } from "../../../services/common";
 import { userDataActions } from "../../../store";
-import HistoryTable from "./components/HistoryTable";
+import HistoryTable from "./components/historyTable";
 import GameHistoryTable from "./components/game-history-table";
 import Dice1 from "./assets/dice1.gif";
 import Dice2 from "./assets/dice2.gif";
